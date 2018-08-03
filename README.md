@@ -23,6 +23,10 @@ trigger-travis.sh typetools checker-framework `cat ~/private/.travis-access-toke
 `TRAVIS_ACCESS_TOKEN` is, or (in the example) `~/private/.travis-access-token` contains,
 the Travis access token.
 
+`MESSAGE` is a string that will be displayed by Travis's web interface.
+(When you push a commit, Travis uses the commit message; `trigger-travis`
+lets you customize the message.)
+
 ## Travis access token
 
 Your Travis access token is the text after "Your access token is " in
