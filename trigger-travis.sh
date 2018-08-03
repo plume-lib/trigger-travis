@@ -38,7 +38,7 @@ TOKEN=$3
 if [ $# -eq 4 ] ; then
     MESSAGE=",\"message\": \"$4\""
 elif [ -n "$TRAVIS_REPO_SLUG" ] ; then
-    MESSAGE=",\"message\": \"Triggered by upstream build of $TRAVIS_REPO_SLUG commit "`git rev-parse --short HEAD`"\""
+    MESSAGE=",\"message\": \"Triggered by upstream build of $TRAVIS_REPO_SLUG commit "`git log --oneline -n 1 HEAD`"\""
 else
     MESSAGE=""
 fi

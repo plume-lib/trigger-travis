@@ -1,4 +1,4 @@
-# trigger-travis
+# trigger-travis.sh
 
 This script triggers a new [Travis-CI](https://travis-ci.org/) job.
 Ordinarily, a new Travis job is triggered when a commit is pushed to a
@@ -24,8 +24,7 @@ trigger-travis.sh typetools checker-framework `cat ~/private/.travis-access-toke
 the Travis access token (see below for details).
 
 `MESSAGE` is a string that will be displayed by Travis's web interface.
-(When you push a commit, Travis uses the commit message; `trigger-travis`
-lets you customize the message.)
+(For a commit push, Travis uses the commit message.)
 
 ## Travis access token
 
@@ -74,6 +73,11 @@ jobs:
           sh trigger-travis.sh OTHERGITHUBID OTHERGITHUBPROJECT $TRAVIS_ACCESS_TOKEN
         fi
 ```
+
+You don't need to supply a MESSAGE argument to `trigger-travis.sh`; it will
+default to the current (upstream) repository, commit id, and one line of
+the commit message.
+
 
 ## Credits and alternatives
 
