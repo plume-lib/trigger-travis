@@ -55,7 +55,7 @@ To make one Travis build (if successful) trigger a different Travis build, do tw
 1. Set an environment variable `TRAVIS_ACCESS_TOKEN` by navigating to
   https://travis-ci.org/MYGITHUBID/MYGITHUBPROJECT/settings .
 The `TRAVIS_ACCESS_TOKEN` environment variable will be set when Travis runs
-the job, but it won't be visible to anyone browsing https://travis-ci.org/.
+the job, but it won't be visible to anyone browsing https://travis-ci.org/ .
 
 2. Add the following to your `.travis.yml` file, where you replace
 OTHERGITHUB* by a specific downstream project, but you leave
@@ -78,7 +78,7 @@ jobs:
 ## Credits and alternatives
 
 Parts of this script were originally taken from
-http://docs.travis-ci.com/user/triggering-builds/
+http://docs.travis-ci.com/user/triggering-builds/ .
 
 An alternative to this script would be to install the Travis command-line
 client and then run:
