@@ -50,12 +50,12 @@ for example by running:  chmod og-rwx ~/private/.travis-access-token
 
 ## Use in `.travis.yml`
 
-To use this script to make one Travis build trigger a different Travis build, do two things:
+To make one Travis build (if successful) trigger a different Travis build, do two things:
 
 1. Set an environment variable `TRAVIS_ACCESS_TOKEN` by navigating to
   https://travis-ci.org/MYGITHUBID/MYGITHUBPROJECT/settings .
 The `TRAVIS_ACCESS_TOKEN` environment variable will be set when Travis runs
-the job, but won't be visible to anyone browsing https://travis-ci.org/.
+the job, but it won't be visible to anyone browsing https://travis-ci.org/.
 
 2. Add the following to your `.travis.yml` file, where you replace
 OTHERGITHUB* by a specific downstream project, but you leave
@@ -85,6 +85,6 @@ client and then run:
 ```
 travis restart -r OTHERGITHUBID/OTHERGITHUBPROJECT
 ```
-Using `travis restart` is undesirable because it restarts an old job,
-destroying its history.  This script starts a new job.
 
+However, using `travis restart` is undesirable because it restarts an old
+job, destroying its history.  This script starts a new job.
