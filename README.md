@@ -35,7 +35,7 @@ the output of this compound command:
   travis login && travis token
 ```
 
-If the travis program isn't installed, then install it using either of these two
+If the `travis` program isn't installed, then install it using either of these two
 commands (whichever one works):
 ```
    gem install travis
