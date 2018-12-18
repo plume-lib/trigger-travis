@@ -8,7 +8,7 @@
 #   trigger-travis.sh typetools checker-framework `cat ~/private/.travis-access-token` "Trigger for testing"
 
 # For full documentation, see
-# https://github.com/plume-lib/trigger-travis/tree/documentation
+# https://github.com/plume-lib/trigger-travis/
 
 
 if [ "$#" -lt 3 ] || [ "$#" -ge 7 ]; then
