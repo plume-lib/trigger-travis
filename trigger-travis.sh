@@ -54,7 +54,8 @@ body="{
   $MESSAGE
 }}"
 
-# It does not work to put / in place of %2F in the URL below.  I'm not sure why.
+# "%2F" creates a literal "/" in the URL, that is not interpreted as a
+# segment or directory separator.
 curl -s -X POST \
   -H "Content-Type: application/json" \
   -H "Accept: application/json" \
