@@ -64,7 +64,6 @@ OTHERGITHUB* by a specific downstream project, but you leave
 jobs:
   include:
     - stage: trigger downstream
-      jdk: oraclejdk8
       script: |
         echo "TRAVIS_BRANCH=$TRAVIS_BRANCH TRAVIS_PULL_REQUEST=$TRAVIS_PULL_REQUEST"
         if [[ ($TRAVIS_BRANCH == master) &&
