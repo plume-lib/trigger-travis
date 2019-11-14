@@ -20,8 +20,8 @@ trigger-travis.sh typetools checker-framework `cat ~/private/.travis-access-toke
 
 `--branch BRANCH` means to use BRANCH instead of master.
 
-`TRAVIS_ACCESS_TOKEN` is, or (in the example) `~/private/.travis-access-token` contains,
-the Travis access token (see below for details).
+`TRAVIS_ACCESS_TOKEN` is the Travis access token; see below for details.
+(In the example above, `~/private/.travis-access-token` contains the Travis access token.)
 
 `MESSAGE` is a string that will be displayed by Travis's web interface.
 (For a commit push, Travis uses the commit message.)
