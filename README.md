@@ -70,8 +70,12 @@ jobs:
               ($TRAVIS_PULL_REQUEST == false) ]] ; then
           curl -LO --retry 3 https://raw.githubusercontent.com/plume-lib/trigger-travis/master/trigger-travis.sh
           sh trigger-travis.sh OTHERGITHUBID OTHERGITHUBPROJECT $TRAVIS_ACCESS_TOKEN
+        else
+	  echo "trigger-travis.sh did not run"
         fi
 ```
+
+You may omit the `echo` commands, which are just for debugging.
 
 You don't need to supply a MESSAGE argument to `trigger-travis.sh`; it will
 default to the current (upstream) repository, commit id, and one line of
