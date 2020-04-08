@@ -38,7 +38,7 @@ TOKEN=$3
 if [ $# -eq 4 ] ; then
     MESSAGE=",\"message\": \"$4\""
 elif [ -n "$TRAVIS_REPO_SLUG" ] ; then
-    MESSAGE=",\"message\": \"Triggered by upstream build of $TRAVIS_REPO_SLUG commit "`git log --oneline -n 1 HEAD`"\""
+    MESSAGE=",\"message\": \"Triggered by upstream build of $TRAVIS_REPO_SLUG commit $(git log --oneline -n 1 HEAD)\""
 else
     MESSAGE=""
 fi
@@ -62,7 +62,7 @@ curl -s -X POST \
   -H "Travis-API-Version: 3" \
   -H "Authorization: token ${TOKEN}" \
   -d "$body" \
-  https://api.${TRAVIS_URL}/repo/${USER}%2F${REPO}/requests \
+  "https://api.${TRAVIS_URL}/repo/${USER}%2F${REPO}/requests" \
  | tee /tmp/travis-request-output.$$.txt
 
 if grep -q '"@type": "error"' /tmp/travis-request-output.$$.txt; then
