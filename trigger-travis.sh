@@ -11,7 +11,7 @@
 # https://github.com/plume-lib/trigger-travis/
 
 
-if [ "$#" -lt 3 ] || [ "$#" -ge 7 ]; then
+if [ "$#" -lt 3 ] || [ "$#" -gt 7 ]; then
   echo "Wrong number of arguments $# to trigger-travis.sh; run like:"
   echo " trigger-travis.sh [--pro] [--branch BRANCH] GITHUBID GITHUBPROJECT TRAVIS_ACCESS_TOKEN [MESSAGE]" >&2
   exit 1
