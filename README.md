@@ -16,7 +16,7 @@ For example:
 trigger-travis.sh typetools checker-framework `cat ~/private/.travis-access-token` "Trigger for testing"
 ```
 
-`--pro` means to use `travis-ci.com` instead of `travis-ci.org`
+`--pro` means to use `travis-ci.com` instead of `travis-ci.org`.
 
 `--branch BRANCH` means to use BRANCH instead of master.
 
@@ -40,11 +40,11 @@ commands (whichever one works):
    gem install travis
    sudo apt-get install ruby-dev && sudo gem install travis
 ```
-*Don't* do `sudo apt-get install travis` which installs a trajectory analyzer.
+*Don't* do `sudo apt-get install travis`, which installs a trajectory analyzer.
 
 Note that the Travis access token output by `travis token` differs from the
 Travis token available at https://travis-ci.org/profile .
-If you store it in in a file, make sure the file is not readable by others,
+If you store it in a file, make sure the file is not readable by others,
 for example by running:  chmod og-rwx ~/private/.travis-access-token
 
 ## Use in `.travis.yml`
