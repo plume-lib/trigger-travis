@@ -54,7 +54,7 @@ body="{
   $MESSAGE
 }}"
 
-# "%2F" creates a literal "/" in the URL, that is not interpreted as a
+# "%2F" creates a literal "/" in the URL, which is not interpreted as a
 # segment or directory separator.
 curl -s -X POST \
   -H "Content-Type: application/json" \
